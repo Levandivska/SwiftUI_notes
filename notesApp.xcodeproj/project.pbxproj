@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F26655B244E072C003F3ADC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F26655A244E072C003F3ADC /* ImagePicker.swift */; };
 		0F343653242AA44F00721C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F343652242AA44F00721C4B /* AppDelegate.swift */; };
 		0F343655242AA44F00721C4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F343654242AA44F00721C4B /* SceneDelegate.swift */; };
 		0F343658242AA44F00721C4B /* notesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F343656242AA44F00721C4B /* notesApp.xcdatamodeld */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F26655A244E072C003F3ADC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		0F34364F242AA44F00721C4B /* notesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F343652242AA44F00721C4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F343654242AA44F00721C4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F266559244E06FC003F3ADC /* ImagesPicker */ = {
+			isa = PBXGroup;
+			children = (
+				0F26655A244E072C003F3ADC /* ImagePicker.swift */,
+			);
+			path = ImagesPicker;
+			sourceTree = "<group>";
+		};
 		0F343646242AA44F00721C4B = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +135,7 @@
 		0F343651242AA44F00721C4B /* notesApp */ = {
 			isa = PBXGroup;
 			children = (
+				0F266559244E06FC003F3ADC /* ImagesPicker */,
 				0F343685242AA4A800721C4B /* Models */,
 				0F343652242AA44F00721C4B /* AppDelegate.swift */,
 				0F3D8A41242B8E42006E877F /* Profile.swift */,
@@ -326,6 +337,7 @@
 				0F3D8A31242B50C4006E877F /* MyView.swift in Sources */,
 				0F343658242AA44F00721C4B /* notesApp.xcdatamodeld in Sources */,
 				0F343691242AABE500721C4B /* MainView.swift in Sources */,
+				0F26655B244E072C003F3ADC /* ImagePicker.swift in Sources */,
 				0F3D8A42242B8E42006E877F /* Profile.swift in Sources */,
 				0F34368F242AA74700721C4B /* LoginView.swift in Sources */,
 				0F3D8A3E242B88DE006E877F /* DeletedNotesView.swift in Sources */,

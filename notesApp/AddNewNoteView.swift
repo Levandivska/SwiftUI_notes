@@ -29,7 +29,9 @@ struct AddNewNoteView: View {
             VStack{
                 Text(note.title!)
                     .font(.title)
+                    .lineLimit(1)
                 Text(note.text!)
+                    .lineLimit(1)
             }
     
             Spacer()
