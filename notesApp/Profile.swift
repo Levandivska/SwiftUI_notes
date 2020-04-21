@@ -8,12 +8,64 @@
 
 import SwiftUI
 
+
+struct AllNotesInfoDropDown: View {
+    
+    @State var expand = false
+    @State var allNotes = 50
+    
+    var body: some View {
+        VStack() {
+            HStack() {
+                Text("total quantity")
+                Image(systemName: expand ? "chevron.up" : "chevron.down")
+                    .resizable()
+                    .frame(width: 12, height: 9)
+            }.onTapGesture {
+                self.expand.toggle()
+            }
+            if expand {
+                Text("all notes " + String(allNotes))
+            }
+        }.animation(.spring())
+    }
+}
+
+
+struct NotesInfoPerTypeDropDown: View {
+    
+    @State var expand = false
+    
+    @State var favorites = 10
+    @State var deleted = 5
+    @State var standart = 30
+
+    var body: some View {
+        VStack() {
+            HStack() {
+                Text("quantity per type")
+                Image(systemName: expand ? "chevron.up" : "chevron.down")
+                    .frame(width: 12, height: 9)
+            }.onTapGesture {
+                self.expand.toggle()
+            }
+            if expand{
+                Text("standart " + String(standart))
+                Text("favorites " + String(favorites))
+                Text("deleted " + String(deleted))
+            }
+        }
+        .animation(.spring())
+    }
+}
+
 struct ProfileView: View {
 
     @State private var selectedDate = Date()
     @State var name: String = ""
     @State var firstname: String = ""
     @State var lastname: String = ""
+    
     @State var showImagePicker: Bool = false
     @State var image: Image? = nil
     @State var showDefaultImage = true
@@ -73,9 +125,29 @@ struct ProfileView: View {
                     }
                 }
                 
+                Section(){
+                    VStack() {
+                        VStack(){
+                            AllNotesInfoDropDown()
+                        }
+                    }
+                }
+                
+                Section(){
+                        VStack() {
+                            VStack(){
+                                NotesInfoPerTypeDropDown()
+                            }
+                        }
+                    }
+                            
             } .navigationBarTitle("User info")
         }
+            
+        
     }
+    
+    
 }
 
 struct Profile_Previews: PreviewProvider {
